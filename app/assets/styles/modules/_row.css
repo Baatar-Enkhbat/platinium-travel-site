@@ -1,0 +1,23 @@
+.row {
+  display: grid;
+  grid-template-columns: 100%;
+  &__8 {
+    padding: 0;
+  }
+
+  &__b-nargin-until-medium {
+    margin-top: 1rem;
+  }
+
+  @mixin atMedium {
+    grid-template-columns: 37% 63%;
+    padding: 0;
+    &__8 {
+      padding-left: 65px;
+      padding-right: 0;
+    }
+    &__b-nargin-until-medium {
+      margin-top: 0;
+    }
+  }
+}
