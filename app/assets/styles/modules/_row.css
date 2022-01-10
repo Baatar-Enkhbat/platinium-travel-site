@@ -21,3 +21,35 @@
     }
   }
 }
+.row2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 1.5rem;
+
+  &__medium-1 {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  &__feature-item-icon {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @mixin atMedium {
+    grid-template-columns: 50% 50%;
+    &__medium-1 {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 1.5rem;
+      padding-right: 65px;
+      text-align: left;
+    }
+    &__feature-item-icon {
+      margin-top: 30px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
