@@ -1,6 +1,9 @@
 .row {
   display: grid;
   grid-template-columns: 100%;
+  &__gap1-5 {
+    grid-gap: 1.5rem;
+  }
   &__8 {
     padding: 0;
   }
@@ -8,23 +11,6 @@
   &__b-nargin-until-medium {
     margin-top: 1rem;
   }
-
-  @mixin atMedium {
-    grid-template-columns: 37% 63%;
-    padding: 0;
-    &__8 {
-      padding-left: 65px;
-      padding-right: 0;
-    }
-    &__b-nargin-until-medium {
-      margin-top: 0;
-    }
-  }
-}
-.row2 {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-gap: 1.5rem;
 
   &__medium-1 {
     display: grid;
@@ -37,8 +23,26 @@
     margin-right: auto;
   }
 
+  &--t-margin {
+    margin-top: 120px;
+  }
+
   @mixin atMedium {
-    grid-template-columns: 50% 50%;
+    &__37-63 {
+      grid-template-columns: 37% 63%;
+    }
+    &__2 {
+      grid-template-columns: 50% 50%;
+    }
+
+    padding: 0;
+    &__63 {
+      padding-left: 65px;
+      padding-right: 0;
+    }
+    &__b-margin-until-medium {
+      margin-top: 0;
+    }
     &__medium-1 {
       display: grid;
       grid-template-columns: auto auto;
@@ -46,6 +50,12 @@
       padding-right: 65px;
       text-align: left;
     }
+  }
+  @mixin atLarge {
+    &__3 {
+      grid-template-columns: repeat(3, auto);
+    }
+
     &__feature-item-icon {
       margin-top: 30px;
       margin-left: 0;
